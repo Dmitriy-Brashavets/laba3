@@ -8,8 +8,8 @@ vector<string> get_data(const string&);
 int main() {
 	string file = "data.txt";
 	int parameter;
-	cout В« "Parameter: ";
-	cin В» parameter;
+	cout В << "Parameter: ";
+	cin В >> parameter;
 	vector<string> data = get_data(file);
 	vector<string> copy = data;
 	int count = 0;
@@ -41,7 +41,7 @@ int main() {
 			}
 		}
 		if (!flag_repeat) {
-			cout В« copy[i] В« endl;
+			cout В << copy[i] В << endl;
 		}
 	}
 	return 0;
@@ -52,7 +52,7 @@ vector<string> get_data(const string& s) {
 	vector<string> data;
 	while (!file.eof()) {
 		string temp;
-		file В» temp;
+		file В >> temp;
 		data.push_back(temp);
 	}
 	file.close();
